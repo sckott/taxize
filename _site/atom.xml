@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>taxize</title>
+ <link href="http://recology.info/taxize//atom.xml" rel="self"/>
+ <link href="http://recology.info/taxize//"/>
+ <updated>2014-04-19T07:07:00-07:00</updated>
+ <id>http://recology.info/taxize/</id>
+ <author>
+   <name>Scott Chamberlain</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>taxize</title>
+   <link href="http://recology.info/taxize//2012/02/07/taxize/"/>
+   <updated>2012-02-07T00:00:00-08:00</updated>
+   <id>http://recology.info/taxize//2012/02/07/taxize</id>
+   <content type="html">&lt;p&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;h2&gt;Stuff&lt;/h2&gt;
+
+&lt;p&gt;XXXXX.&lt;/p&gt;
+
+&lt;h3&gt;Sub-heading&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;coffee&quot;&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rMaps&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;L2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Leaflet$new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;L2$setView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;29.7632836&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;95.3632715&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;L2$tileLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;provider = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MapQuestOpen.OSM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;L2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Sub-heading&lt;/h3&gt;
+
+&lt;p&gt;XXXX&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/mdo/hyde/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
