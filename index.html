@@ -21,12 +21,9 @@
     <!-- Custom Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 
-    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
-
 </head>
 
-<body onload="prettyPrint()" bgcolor="white">
+<!-- <body onload="prettyPrint()" bgcolor="white"> -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
@@ -131,12 +128,16 @@
         </div>
     </section>
 
-<pre class="prettyprint">library(rMaps)
-L2 &lt;- Leaflet$new()
-L2$setView(c(29.7632836,  -95.3632715), 10)
-L2$tileLayer(provider = &quot;MapQuestOpen.OSM&quot;)
+<xmp theme="none" style="display:none;">
+## Hello
+
+```Ruby
+L2 <- Leaflet$new()
+L2$setView(c(29.7632836,-95.3632715), 10)
+L2$tileLayer(provider = "MapQuestOpen.OSM")
 L2
-</pre>
+```
+</xmp>
 
     <section id="install" class="content-section text-center">
         <div class="download-section">
@@ -197,6 +198,8 @@ L2
     </script>
     <!-- End Google Prettify --> 
 
+    <!-- strapdown -->
+    <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
 </body>
 
 </html>
