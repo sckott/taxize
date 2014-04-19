@@ -1,202 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Home
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-    <title>taxize</title>
+    <!-- <span class="post-date">{{ post.date | date_to_string }}</span> -->
 
-    <!-- Bootstrap Core CSS -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-    <!-- Fonts -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="css/syntax.css"> -->
-
-    <!-- Custom Theme CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
-
-</head>
-
-<body onload="prettyPrint()" bgcolor="white">
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top">
-                    <i class="fa fa-code-fork"></i>  <span class="light">taxize</span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#r">R</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#python">Python</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#tryit">Try it</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#install">Install</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contribute">Contribute</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <section class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">taxize</h1>
-                        <p class="intro-text">taxonomic toolbelt for R and Python</p>
-                        <div class="page-scroll">
-                            <a href="#about" class="btn btn-circle">
-                                <i class="fa fa-angle-double-down animated"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About taxize</h2>
-                <p>taxize XXXX</p>
-                <p>This striking, black and white theme features stock photographs by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Map skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>With this template, just the slightest splash of color can make a huge impact on the overall presentation and design.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="r" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>R</h2>
-                <p>Grayscale is a premium quality, free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, all you need to do is download the template on the preview page. You can use this template for any purpose, personal or commercial.</p>
-                <p>This striking, black and white theme features stock photographs by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Map skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>With this template, just the slightest splash of color can make a huge impact on the overall presentation and design.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="python" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Python</h2>
-                <p>The Python library is in alpha phase now. Check back later, or contribute!</p>
-                <p>With this template, just the slightest splash of color can make a huge impact on the overall presentation and design.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="tryit" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Try it</h2>
-            </div>
-        </div>
-    </section>
-
-<pre class="prettyprint">library(rMaps)
-L2 &lt;- Leaflet$new()
-L2$setView(c(29.7632836,  -95.3632715), 10)
-L2$tileLayer(provider = &quot;MapQuestOpen.OSM&quot;)
-L2
-</pre>
-
-    <section id="install" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Install</h2>
-                    <p>You can download Grayscale for free on the download page at Start Bootstrap. You can also get the source code directly from GitHub if you prefer. Additionally, Grayscale is the first Start Bootstrap theme to come with a LESS file for easy color customization!</p>
-                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Install</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contribute" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contribute</h2>
-                <p>Fork -> Edit -> Send pull reqeust to rOpenSci/taxize for R or sckott/pytaxize for Python</p>
-                <p>scott@ropensci.org</p>
-                <ul class="list-inline banner-social-buttons">
-                    <li><a href="https://twitter.com/ropensci" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li><a href="https://github.com/ropensci/taxize" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github-R</span></a>
-                    </li>
-                    <li><a href="https://github.com/sckott/pytaxize" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github-Python</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-<!--     <section class="container content-section text-center">
-        <small>Theme from <a href="http://startbootstrap.com/">http://startbootstrap.com/</a> </small>
-    </section> -->
-
-    <!-- <div id="map"></div> -->
-
-    <!-- Core JavaScript Files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - You will need to use your own API key to use the map feature -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
-    <!-- Google Prettify -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
-    <script src='libraries/highlighters/prettify/js/lang-r.js'></script>
-    <script>
-    var pres = document.getElementsByTagName("pre");
-    for (var i=0; i < pres.length; ++i) {
-      pres[i].className = "prettyprint ";
-    }
-    prettyPrint();
-    </script>
-    <!-- End Google Prettify --> 
-
-</body>
-
-</html>
+<!-- <div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div> -->

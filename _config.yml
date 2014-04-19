@@ -1,0 +1,25 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            taxize
+tagline:          'taxize'
+description:      'taxonomic toolbelt for R and Python'
+url:              http://recology.info/taxize/
+
+author:
+  name:           'Scott Chamberlain'
+  url:            https://twitter.com/recology_
+
+paginate:         5
+
+# Custom vars
+rversion:          0.2.2
+pythonversion:     0.0.1
+
+github:
+  repo:           https://github.com/poole/hyde
