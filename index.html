@@ -16,11 +16,17 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="css/syntax.css"> -->
 
     <!-- Custom Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+
 </head>
+
+<body onload="prettyPrint()" bgcolor="white">
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
@@ -55,7 +61,7 @@
                         <a href="#tryit">Try it</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#download">Download</a>
+                        <a href="#install">Install</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contribute">Contribute</a>
@@ -121,18 +127,24 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Try it</h2>
-                
             </div>
         </div>
     </section>
 
-    <section id="download" class="content-section text-center">
+<pre class="prettyprint">library(rMaps)
+L2 &lt;- Leaflet$new()
+L2$setView(c(29.7632836,  -95.3632715), 10)
+L2$tileLayer(provider = &quot;MapQuestOpen.OSM&quot;)
+L2
+</pre>
+
+    <section id="install" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
+                    <h2>Install</h2>
                     <p>You can download Grayscale for free on the download page at Start Bootstrap. You can also get the source code directly from GitHub if you prefer. Additionally, Grayscale is the first Start Bootstrap theme to come with a LESS file for easy color customization!</p>
-                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Install</a>
                 </div>
             </div>
         </div>
@@ -160,7 +172,7 @@
         <small>Theme from <a href="http://startbootstrap.com/">http://startbootstrap.com/</a> </small>
     </section> -->
 
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
 
     <!-- Core JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -172,6 +184,18 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+    <!-- Google Prettify -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+    <script src='libraries/highlighters/prettify/js/lang-r.js'></script>
+    <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint ";
+    }
+    prettyPrint();
+    </script>
+    <!-- End Google Prettify --> 
 
 </body>
 
