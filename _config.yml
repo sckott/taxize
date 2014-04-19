@@ -10,6 +10,7 @@ title:            taxize
 tagline:          'taxize'
 description:      'taxonomic toolbelt for R and Python'
 url:              http://recology.info/taxize/
+baesurl:		  '/taxize'
 
 author:
   name:           'Scott Chamberlain'
@@ -22,4 +23,4 @@ rversion:          0.2.2
 pythonversion:     0.0.1
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/ropensci/taxize
